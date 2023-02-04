@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/products/';//aqui se hacen las peticiones 
+const URI = 'https://tienda-react.onrender.com/products/';//aqui se hacen las peticiones 
 
 export const Product = (props) => {
     const { id, productName, price, img1, img2, img3, stockMax, stockMin } = props.data; //aqui se guardan los datos de los productso

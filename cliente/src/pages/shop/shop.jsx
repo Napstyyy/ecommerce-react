@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const URI = 'http://localhost:3001/products/'; //se hacen las peticiones aqui 
+const URI = 'https://tienda-react.onrender.com/products/'; //se hacen las peticiones aqui 
 
 export const Shop = () => {
 

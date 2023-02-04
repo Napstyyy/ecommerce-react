@@ -41,7 +41,7 @@ export default function PaymentForm() {
     if(!error){
         try {
             const {id} = paymentMethod //si n hay error se almacena el if de payment method
-            const response = await axios.post("http://localhost:3001/payment", { //se cre una peticion para el pago
+            const response = await axios.post("https://tienda-react.onrender.com/payment", { //se cre una peticion para el pago
                 amount: context.payAumount, //con el total de la compra
                 id
             });

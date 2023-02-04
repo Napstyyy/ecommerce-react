@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { ShopContext } from "../../context/shop-context";
 import { useContext } from "react";
 
-const URI = 'http://localhost:3001/users/';//ruta para hacer las peticiones 
+const URI = 'https://tienda-react.onrender.com/users/';//ruta para hacer las peticiones 
 
 const Login = () => {
     const context = useContext(ShopContext);
@@ -36,7 +36,6 @@ const Login = () => {
     }, [])
 
     const getUsers = async() => {//aqui se soolicitan los usurios
-        console.log('hola');
         const res = await axios.get(URI)
         console.log(res.data);
         setUsers(res.data)

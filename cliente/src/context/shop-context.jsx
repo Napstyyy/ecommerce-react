@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 
 export const ShopContext = createContext(null);
-const URI = 'http://localhost:3001/products/';//esta sera la ruta a la cual se generaran peticiones en este caso sera para los productos
+const URI = 'https://tienda-react.onrender.com/products/';//esta sera la ruta a la cual se generaran peticiones en este caso sera para los productos
 
 const getDefaultCart = () => {//se crea un arreglo que se usara para darle una cantidad a cada producto esto, cada posicion del arreglo contendra un cero como cantidad
     let cart = {}
