@@ -6,7 +6,7 @@ import { ShopContext } from "../context/shop-context";
 
 
 export const Navbar = () => {
-    const context = useContext(ShopContext); //le damos las funciones del shop context a la variable context
+    const context = useContext(ShopContext); /*le damos las funciones del shop context a la variable context*/
     
     return (
         <div className="navbar">

@@ -14,18 +14,18 @@ import StripeContainer from "./pages/Payment/stripeContainer";
 function App() {
   return (
     <div className="App"> 
-      <ShopContextProvider>{/*aqui se ingresan las rutas del proyecto con sus respectivos elemento */}
+      <ShopContextProvider>{/* aqui se ingresan las rutas del proyecto con sus respectivos elemento */}
       <Router>
-        <Navbar />//se llama al componente del Navbar
+        <Navbar /> {/*se llama al componente del Navbar */}
         <Routes>
-          <Route path="/" element={<Shop />}/> //se le entrega a la ruta "/" el componente Shop
-          <Route path="/shop" element={<ShopAddtoCart />}/> // se le agrega "/shop" el componente ShopAddCart
-          <Route path="/cart" element={<Cart />}/>
-          <Route path="/login" element={<Login />}/>
-          <Route path="/register" element={<Register />}/>
-          <Route path="/editAdmin" element={<EditAdmin />}/>
-          <Route path="/editInventory" element={<EditProduct />}/>
-          <Route path="/stripe" element={<StripeContainer />}/>
+          <Route path="/" element={<Shop />}/> {/*se le entrega a la ruta "/" el componente Shop*/}
+          <Route path="/shop" element={<ShopAddtoCart />}/> // {/*se le agrega "/shop" el componente ShopAddCart*/}
+          <Route path="/cart" element={<Cart />}/>{/* se crea la ruta cart al modulo del carro */}
+          <Route path="/login" element={<Login />}/>{/* se crea la ruta del login al login */}
+          <Route path="/register" element={<Register />}/>{/* se crea la ruta register al registro */}
+          <Route path="/editAdmin" element={<EditAdmin />}/>{/* se crea la ruta en la que el admin edita */}
+          <Route path="/editInventory" element={<EditProduct />}/>{/* se crea la ruta para editar el inventorio */}
+          <Route path="/stripe" element={<StripeContainer />}/>{/* se crea la ruta para el portal de pago */}
         </Routes>
       </Router>
       </ShopContextProvider>

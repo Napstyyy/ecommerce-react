@@ -1,5 +1,6 @@
 import UserModel from "../models/UserModel.js";
 
+//gets all users
 export const getAllUsers = async (req,res) => {
     try {
         const Users  = await UserModel.findAll()
@@ -21,6 +22,7 @@ export const createUser = async (req,res) => {
     }
 }
 
+//updates user info
 export const updateUser = async (req,res) =>{
     try {
         await UserModel.update(req.body, {
@@ -34,6 +36,7 @@ export const updateUser = async (req,res) =>{
     }
 }
 
+//gets an specific user by its id
 export const getUser = async (req,res) => {
     try {
        const user = await UserModel.findAll({

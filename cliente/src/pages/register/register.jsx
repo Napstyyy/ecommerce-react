@@ -32,7 +32,9 @@ const Register = () => {
     }
 
     const store = async (e) => { //hace un metodo post para ingresar el usuario a la base de taods
+        
         e.preventDefault();
+        console.log("registrado")
         await axios.post(URI, {username: name, password: password, adress: adress, telephone: telephone, email: email });
         navigateLogin();
     }
