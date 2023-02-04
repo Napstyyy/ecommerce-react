@@ -6,7 +6,7 @@ import { Sequelize } from 'sequelize'; //Sequelize se encarga de la conexion con
 //});
 
 //conexion a la base de datos conectada a un hosting gratis en linea
-const db = new Sequelize('ecommerce','pulg4tx1','cristyan115',{
+const db = new Sequelize('e-commerce','pulg4tx1','cristyan115',{
     host:'pulgatx.com.mialias.net',
     dialect: 'mysql'
 })
