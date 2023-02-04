@@ -6,9 +6,10 @@ const router = express.Router();
 //diferentes rutas a usar con las diferentes funcionalidades
 
 router.get('/', getAllUsers)
+router.post('/', createUser)
 router.put('/:id', updateUser)
 router.get('/:id', getUser)
-router.post('/', createUser)
+
 
 
 export default router;
