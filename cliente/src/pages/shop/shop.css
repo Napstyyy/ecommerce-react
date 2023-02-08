@@ -6,8 +6,8 @@
   .products {
     width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     place-items: center;
   }
   

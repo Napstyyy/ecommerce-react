@@ -1,9 +1,6 @@
 import Stripe from "stripe";//portal de pagos para conectarse a su api
 const striper = Stripe('sk_test_51MWhnQLqSKdo0hycwt7WxpkMIdztbNpHbWNqsQecV2TV3g9dmQXvJaQLQDTKEMqU1mVsEPllIyoY9bylXdkjZYhh00bmJRQRC9'); //clave de acceso stripe para recibir el pago
 
-//router.post("/payment", (req,res)=>{
-//    let costumer = stripe.costumer
-//})
 
 //funcion que permite conectarse a la api y realizar los pagos
 export const pay = async (req,res) => {

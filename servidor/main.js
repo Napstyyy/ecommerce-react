@@ -9,6 +9,7 @@ const app = Express();//la app se conecta con express
 
 
 app.use(cors());//prevenir fallas de conexcion
+app.use(Express.json());//permite obtener el paquete express en un json
 app.use('/products', productRoutes);//permite obtener el paquete express en un json
 app.use('/users', userRoutes);//se generalizan las rutas de los productso
 app.use('/payment',pay)//se generalizan las rutas de los pagos

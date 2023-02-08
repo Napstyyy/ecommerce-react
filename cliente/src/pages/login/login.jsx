@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { ShopContext } from "../../context/shop-context";
 import { useContext } from "react";
 
-const URI = 'https://tienda-react.onrender.com/users/';//ruta para hacer las peticiones 
+const URI = 'http://localhost:3001/users/';//ruta para hacer las peticiones 
 
 const Login = () => {
     const context = useContext(ShopContext);
@@ -64,7 +64,7 @@ const Login = () => {
                     type="password" name="pass" id="pass" placeholder="password" />
                 <input type="submit" className="btn-login" value="Login" onClick={(e) => { //al darle click al si compare es true osea que el login tuvo exito
                     e.preventDefault();
-                    if(compare()) //preguntasi la comparacion tuvo exito
+                    if(compare()) //pregunta si la comparacion tuvo exito
                     {
                         if (entrada === 'admin') //si el nombre de la entrada 
                         {
@@ -73,7 +73,7 @@ const Login = () => {
                         }
                         else 
                             navigateShopAddtoCart();//de lo contrario es un usuario normal por lo que envia al shop con los botones
-                        context.loggedChanger(true);//se cabia a true el hook que pone si esta logeado el usuario
+                            context.loggedChanger(true);//se cabia a true el hook que pone si esta logeado el usuario
                     }
                     else
                          navigateLogin()}}/>

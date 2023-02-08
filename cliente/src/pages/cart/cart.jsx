@@ -7,7 +7,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const URI = 'https://tienda-react.onrender.com/products/';//esta sera la ruta en la cual se haran las peticiones
+const URI = 'http://localhost:3001/products/';//esta sera la ruta en la cual se haran las peticiones
 
 export const Cart = () => {
     const context = useContext(ShopContext);//variable para usar el contexto

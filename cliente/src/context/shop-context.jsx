@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 
 export const ShopContext = createContext(null);
-const URI = 'https://tienda-react.onrender.com/products/';//esta sera la ruta a la cual se generaran peticiones en este caso sera para los productos
+const URI = 'http:/localhost:3001/products/';//esta sera la ruta a la cual se generaran peticiones en este caso sera para los productos
 
 const getDefaultCart = () => {//se crea un arreglo que se usara para darle una cantidad a cada producto esto, cada posicion del arreglo contendra un cero como cantidad
     let cart = {}
@@ -47,7 +47,7 @@ export const ShopContextProvider = (props) => {
     };
 
     const addToCart = async (itemId) => {//funcion para poder agregar al carrito enviando como parametro el id del producto y poder reservarlo en el servidor
-        await axios.get('https://tienda-react.onrender.com/products/book/'+ itemId + '?f=book') //se genera una peticion get para poder traer el el producto el cual se va reservar el producto
+        await axios.get('http:/localhost:3001/products/book/'+ itemId + '?f=book') //se genera una peticion get para poder traer el el producto el cual se va reservar el producto
         .then(({ data }) => {
             data==='Booked' ? setCartItems((prev) => ({...prev, [itemId]: prev[itemId] + 1 })) : void(0);//si el dato extraido es Booked le sumamos 1 a la posicion que represente al producto dentro del arreglo para poder saber la cantidad de cada producto
             data==='Stockout' ? alert('Empty product') : void(0); //en caso de que el estado retornado sea Stockout se crea una alerta que dice que el producto esta vacio y no hace nada
@@ -58,7 +58,7 @@ export const ShopContextProvider = (props) => {
     };
 
     const removeFromCart = async (itemId) => { //funcion para remover del carrito a partir del id
-        await axios.get('https://tienda-react.onrender.com/products/book/'+ itemId + '?f=unbook') //en esta ruta se hace la peticion
+        await axios.get('http:/localhost:3001/products/book/'+ itemId + '?f=unbook') //en esta ruta se hace la peticion
         .then(({ data }) => {
             data==='Unbooked' ? setCartItems((prev) => ({...prev, [itemId]: prev[itemId] - 1 })) : void(0);//si tiene el estado unbooked se le resta 1 en el arreglo de la cantidad
         })

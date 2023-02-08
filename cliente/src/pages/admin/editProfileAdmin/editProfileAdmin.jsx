@@ -5,7 +5,7 @@ import { useState } from "react";
 import encriptador from "../../../encripter";
 
 
-const URIADMIN = 'https://tienda-react.onrender.com/users/10/'; //aqui se hacen las peticiones para el admin
+const URIADMIN = 'http://localhost:3001/users/10/'; //aqui se hacen las peticiones para el admin
 
 const EditAdmin = () => {
     const [password, setPassword] = useState('');//se guarda la contrasena
@@ -30,7 +30,7 @@ const EditAdmin = () => {
             <form onSubmit={update} action="/auth" method="post">
                 <input 
                 value={password}
-                onChange={ (e) => setPassword(encriptador.enmascarador(e.target.value))}
+                onChange={ (e) => setPassword(e.target.value)}
                 type="password" name="pass" id="pass" placeholder="password"/>
                 <input 
                 value={adress}
